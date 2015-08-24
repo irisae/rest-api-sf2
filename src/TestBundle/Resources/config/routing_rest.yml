@@ -1,0 +1,4 @@
+rest_test:
+    type:     rest
+    resource: TestBundle\Controller\RestController
+    name_prefix:  api_

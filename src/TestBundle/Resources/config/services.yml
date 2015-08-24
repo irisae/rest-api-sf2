@@ -1,0 +1,4 @@
+services:
+    game_service:
+        class: TestBundle\Service\GameService
+        arguments: [@doctrine.orm.entity_manager]

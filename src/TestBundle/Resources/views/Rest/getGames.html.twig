@@ -1,0 +1,17 @@
+{% block content %}
+    <h1 class="title">Game list</h1>
+
+    <ul id="page-list">
+        {% for game in data %}
+            <li>
+                <a href="{{ path('api_get_game', {'id': game.id}) }}">{{ game.name }}</a>
+                <p>{{ game.nbPlayer }}</p>
+            </li>
+        {% else %}
+            <li>Empty</li>
+        {% endfor %}
+    </ul>
+    <p>
+        <a href="{{ path('api_post_game') }}">Create a new Game</a>
+    </p>
+{% endblock %}
