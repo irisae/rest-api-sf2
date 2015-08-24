@@ -24,9 +24,6 @@ class RestController extends FOSRestController
     {
         $em = $this->getDoctrine()->getManager();
         $games = $em->getRepository('TestBundle:Game')->findAll();
-        if (empty($games)) {
-            return [];
-        }
 
         return $games;
 
@@ -42,9 +39,6 @@ class RestController extends FOSRestController
     {
         $em = $this->getDoctrine()->getManager();
         $games = $em->getRepository('TestBundle:Game')->findAll();
-        if (empty($games)) {
-            return [];
-        }
 
         return $games;
 
